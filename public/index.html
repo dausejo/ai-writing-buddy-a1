@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8ff">
+  <meta name="description" content="AI Writing Buddy A1 helps beginner English learners improve their own writing through friendly feedback and hints.">
+  <title>AI Writing Buddy A1</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand-icon" aria-hidden="true">📝</div><div><div class="eyebrow">YOUR FRIENDLY ENGLISH WRITING COACH</div><h1>AI Writing Buddy <span>A1</span></h1><p class="subtitle">Write it yourself. Learn from feedback. Grow with confidence.</p></div></header>
+    <section class="intro"><div class="sparkle">✦</div><div><h2>Hi there! Ready to improve your writing?</h2><p>Share your own first draft. I'll help you notice up to three important mistakes with simple explanations and hints. <strong>You do the correcting!</strong></p></div></section>
+    <section class="workspace">
+      <form id="writing-form" class="form-card">
+        <div class="section-heading"><span class="step">1</span><div><h2>Your writing</h2><p>Use your own words. Don't worry about mistakes!</p></div></div>
+        <label for="topic">Writing topic <span class="optional">(optional)</span></label>
+        <input id="topic" name="topic" maxlength="160" placeholder="e.g. My daily routine">
+        <label for="draft">Your first draft in English <span class="required">*</span></label>
+        <textarea id="draft" name="draft" rows="7" maxlength="7000" required placeholder="Write or paste your own English text here..."></textarea>
+        <div class="counter"><span id="word-count">0 words</span><span>First drafts should be your own work</span></div>
+        <details class="rubric-details"><summary>Add your teacher's rubric (optional)</summary><textarea id="rubric" rows="3" maxlength="3000" placeholder="Paste the rubric and scoring scale, if your teacher provided one."></textarea><p class="micro">Without a rubric, the chatbot will not invent criteria or assign a numerical grade.</p></details>
+        <label for="mode">What would you like help with?</label>
+        <select id="mode"><option value="feedback">Check my first draft</option><option value="revision">Check my revised draft</option><option value="translation">Help me reflect on meaning / back-translation</option></select>
+        <button id="submit-btn" type="submit"><span>Get friendly feedback</span><span aria-hidden="true">→</span></button>
+        <p class="privacy-note">🔒 Please don't include passwords, addresses, phone numbers, or other private information.</p>
+      </form>
+      <section class="feedback-card" aria-live="polite"><div class="section-heading"><span class="step step-purple">2</span><div><h2>Your feedback</h2><p>Small steps help you learn.</p></div></div>
+        <div id="empty-state" class="empty-state"><div class="empty-art">✏️</div><h3>Your feedback will appear here</h3><p>After you submit your draft, we'll look at a few important points and give you hints to help you correct them yourself.</p><div class="example-chips"><span>Grammar</span><span>Vocabulary</span><span>Word order</span></div></div>
+        <div id="loading" class="loading hidden"><div class="spinner"></div><p>Reading your writing carefully…</p><span>Good writers learn one step at a time.</span></div>
+        <div id="error" class="error hidden" role="alert"></div>
+        <article id="feedback" class="feedback hidden"></article>
+        <button id="copy-feedback" class="secondary-button hidden" type="button">Copy feedback</button>
+      </section>
+    </section>
+    <section class="how"><h2>How it works</h2><div class="how-grid"><div><span>01</span><h3>Write alone</h3><p>Your first draft comes from you.</p></div><div><span>02</span><h3>Read the hints</h3><p>Understand what needs attention.</p></div><div><span>03</span><h3>Try again</h3><p>Correct your own mistakes and reflect.</p></div></div></section>
+    <footer><p><strong>AI Writing Buddy A1</strong> · A learning assistant, not a replacement for your teacher.</p><p>AI can make mistakes. Check suggestions with your teacher.</p></footer>
+  </main>
+  <script src="app.js"></script>
+</body></html>

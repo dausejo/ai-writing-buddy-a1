@@ -1,0 +1,10 @@
+{
+  "name": "ai-writing-buddy-a1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Writing Buddy A1 - formative English writing feedback for CEFR A1 learners",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "openai": "^4.77.0" }
+}
